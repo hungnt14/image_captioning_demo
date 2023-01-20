@@ -10,7 +10,7 @@ import streamlit as st
 import requests
 import json
 
-API_ADDRESS = f"http://{os.environ['API_ADDRESS']}/api/{os.environ['API_VERSION']}/generate_captions"
+URL = f"http://{os.environ['API_ADDRESS']}/api/{os.environ['API_VERSION']}/generate_captions"
 
 st.title("Image captioning demo")
 
@@ -33,7 +33,7 @@ if uploaded_files:
     if st.button("Generate caption(s)"):
         with st.spinner("Generating..."):
             response = requests.post(
-                API_ADDRESS, data={"filenames": filenames}, files=image_files
+                URL, data={"filenames": filenames}, files=image_files
             )
         if response.status_code == 200:
             results = json.loads(response.text)
