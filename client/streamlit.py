@@ -10,7 +10,7 @@ import streamlit as st
 import requests
 import json
 
-API_ADDRESS = f"http://{os.environ['API_ADDRESS']}/api/v1/generate_captions"
+API_ADDRESS = f"http://{os.environ['API_ADDRESS']}/api/{os.environ['API_VERSION']}/generate_captions"
 
 st.title("Image captioning demo")
 
