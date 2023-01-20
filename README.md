@@ -45,7 +45,10 @@ Following the above system design, codebase is organized based on the function o
 
 ## 4. Installation:
 Look through `.env` file to change anything if you need before setting up things
-### Presquite
+
+### Prerequisite
+- Python 3.9
+- Docker Compose 2.12
 
 ### Database
 ```
