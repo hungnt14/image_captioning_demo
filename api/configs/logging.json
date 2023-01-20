@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s %(levelname)s - %(filename)s %(funcName)s(%(lineno)d) - %(message)s"
+        }
+    },
+    "handlers": {
+        "api_io_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "filename": "logs/app_log.log",
+            "maxBytes": 51200000,
+            "backupCount": 10,
+            "encoding": "utf-8"
+        },
+        "error_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "ERROR",
+            "formatter": "simple",
+            "filename": "logs/error_log.log",
+            "maxBytes": 51200000,
+            "backupCount": 10,
+            "encoding": "utf-8"
+        }
+    },
+    "loggers": {
+        "app_logger": {
+            "level": "DEBUG",
+            "handlers": [
+                "api_io_file"
+            ]
+        },
+        "error_logger": {
+            "level": "ERROR",
+            "handlers": [
+                "error_file"
+            ]
+        }
+    }
+}

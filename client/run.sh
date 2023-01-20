@@ -1,0 +1,1 @@
+streamlit run streamlit.py --server.port 8080 --server.maxUploadSize 10

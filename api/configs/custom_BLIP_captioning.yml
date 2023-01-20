@@ -1,0 +1,13 @@
+dataset:
+  image_size: 384
+  batch_size: 1
+  num_workers: 1
+inference:
+  device: 'cpu'
+  med_config: './configs/med_config.json'
+  vit: 'base'
+  pretrained: 'https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base_caption_capfilt_large.pth'
+  max_length: 20
+  min_length: 5
+  num_beams: 3
+  prompt: ''
